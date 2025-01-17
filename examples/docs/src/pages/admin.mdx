@@ -130,7 +130,7 @@ Your current terminal connection will remain live on the current port until you 
 
 ### Update Firewall
 
-Update your firewall to change port 22 to the new port # you chose at this point. Here's a reminder on our [Harmony](/harmony/companion#firewall-setup-notes) & [Findora](/findora/new#firewall) firewall notes. Sub your new port for 22 in the guides.
+Update your firewall to change port 22 to the new port # you chose at this point. Here's a reminder on our [Harmony](/harmony/companion#firewall-setup-notes) & [Fractal](/fractal/new#firewall) firewall notes. Sub your new port for 22 in the guides.
 
 This is also a good time to set the new port to only allow your home/work IPs for extra security. Get your IP by visiting [whatismyip.com](https://whatismyip.com).
 
@@ -257,7 +257,7 @@ The above configuration will block the remote IPs after three failed attempts to
 Snippets are shortcuts in termius that you can run with 1 click. Here's some of our favorites:
 
 <Tabs
-  items={["Run Harmony Toolbox", "Show Harmony Stats", "Run Findora Toolbox"]}
+  items={["Run Harmony Toolbox", "Show Harmony Stats", "Run Fractal Toolbox"]}
   defaultIndex="0"
 >
   <Tab>
@@ -275,10 +275,10 @@ Snippets are shortcuts in termius that you can run with 1 click. Here's some of 
     ```
   </Tab>
   <Tab>
-    To launch Findora Toolbox with the latest updates and return you to the user home folder when you exit, make the snippet:  
+    To launch Fractal Toolbox with the latest updates and return you to the user home folder when you exit, make the snippet:  
     
     ```text copy 
-    cd ~/ && bash -x ~/findora.sh
+    cd ~/ && bash -x ~/fractal.sh
     ```
   </Tab>
 </Tabs>
@@ -309,7 +309,7 @@ A graphical user interface is great for transferring files. This is built into [
 
 ### Docker Installation
 
-Docker is required to run Findora, so with your new server online and logged in to the user you'll be running the programs as, install docker on your Ubuntu 20.04/22.04LTS system with the following command. If you user isn't `servicefindora` update that to be your username in the following code before running it on your server:
+Docker is required to run Fractal, so with your new server online and logged in to the user you'll be running the programs as, install docker on your Ubuntu 20.04/22.04LTS system with the following command. If you user isn't `servicefindora` update that to be your username in the following code before running it on your server:
 
 ```text copy
 sudo apt update -y && sudo apt install apt-transport-https ca-certificates curl software-properties-common -y && curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add - && sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable" && sudo apt install docker-ce -y && sudo usermod -aG docker servicefindora
@@ -357,9 +357,9 @@ Made by us, ⚡ EasyNode.PRO ⚡
 
 We have a [repository of Harmony Validator Scripts](https://github.com/easy-node-pro/harmony-validator-scripts) with details on how to use those but consider using the toolbox over these tools, they are no longer maintained and are only community supported at this time.
 
-### Findora FRA Scripts
+### Fractal FRA Scripts
 
-We have a [repository of Findora Validator Scripts](https://github.com/easy-node-pro/findora-validator-scripts) with details on how to use those but consider using the toolbox over these tools going forward. These are still maintained for now.
+We have a [repository of Fractal Validator Scripts](https://github.com/easy-node-pro/fractal-validator-scripts) with details on how to use those but consider using the toolbox over these tools going forward. These are still maintained for now.
 
 ## Upgrades
 

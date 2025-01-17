@@ -1,14 +1,14 @@
 import { Callout } from 'nextra-theme-docs'
 import { Tab, Tabs } from "nextra-theme-docs";
 
-# New Findora Validators
-Welcome to Easy Node Validator's Companion guide. This page is a guide that covers the lifestyle of a Findora validator. You'll see our notes on the 3 ways to use the official documents site to setup a server separate from this guide.  
+# New Fractal Validators
+Welcome to Easy Node Validator's Companion guide. This page is a guide that covers the lifestyle of a Fractal validator. You'll see our notes on the 3 ways to use the official documents site to setup a server separate from this guide.  
 
-[![Findora Logo](/findora_logo_white.png)](/findora)
+[![Fractal Logo](/findora_logo_white.png)](/fractal)
 
 ## General Overview
 ### How much time does it take to manage a validator?
-Being a Findora validator doesn't have a lot of time commitment to it. The systems run a Docker container for the blockchain and the application `fn` for wallet interactions. Setup monitoring with [vStatsFindoraBot](https://t.me/vStatsFindoraBot) after you get your address and you'll know if you run into issues.  
+Being a Fractal validator doesn't have a lot of time commitment to it. The systems run a Docker container for the blockchain and the application `fn` for wallet interactions. Setup monitoring with [vStatsFindoraBot](https://t.me/vStatsFindoraBot) after you get your address and you'll know if you run into issues.  
 
 Here's some helpful tips to keep in mind along the way!  
 
@@ -19,19 +19,19 @@ Here's some helpful tips to keep in mind along the way!
   <Tab>
     There's a few different ways to learn the software or to just simply get it installed. Here's the 3 current methods that work best. All of these methods assume you already setup a server with Docker and you're ready to get to installing:  
 
-    - [Manual Method](https://docs.findora.org/validator-materials/node-setup-guides/manual-setup) - Use the Findora docs site to install. This is recommended for first time installers and people not familliar with Linux.
-    - [Script Method](https://docs.findora.org/validator-materials/node-setup-guides/automated-setup) - Our take on the "Automated Install" on the page above. We've made it smoother and added a lot of bells and whistles.
-    - [Validator Toolbox Method](https://docs.findora.org/validator-materials/node-setup-guides/toolbox-setup) - Official Findora Validator Setup & Management Toolkit.
+    - [Manual Method](https://docs.fractal.org/validator-materials/node-setup-guides/manual-setup) - Use the Fractal docs site to install. This is recommended for first time installers and people not familliar with Linux.
+    - [Script Method](https://docs.fractal.org/validator-materials/node-setup-guides/automated-setup) - Our take on the "Automated Install" on the page above. We've made it smoother and added a lot of bells and whistles.
+    - [Validator Toolbox Method](https://docs.fractal.org/validator-materials/node-setup-guides/toolbox-setup) - Official Fractal Validator Setup & Management Toolkit.
   </Tab>
   <Tab>
-    Configuring a Findora node can be straight forward with either method we cover here & a cloud host provider. If you manually install Findora from their docs site or use home hardware here's some extra things to know:
+    Configuring a Fractal node can be straight forward with either method we cover here & a cloud host provider. If you manually install Fractal from their docs site or use home hardware here's some extra things to know:
 
     - Pick a server host or have hardware at home and know how to forward ports
     - Create cloud server VPS or load home system with Linux
     - Create a [non-root user account](/admin#user-account)
     - Setup passwordless login, change ssh port, disable password & root login for more security
     - Setup Firewall or port forwarding
-    - Pull findora.sh script and run it
+    - Pull fractal.sh script and run it
     - Backup your key files
     - Know how to migrate to a new server for disaster recovery/Migrations
   </Tab>
@@ -40,9 +40,9 @@ Here's some helpful tips to keep in mind along the way!
 
     - Create a brand and market it, a lot
     - Find a way to add to the community, make people know you're helping
-    - Answer questions in the official Findora support channels
+    - Answer questions in the official Fractal support channels
     - Work on getting more delegations, you'll need it
-    - Monitor stats non stop on [Smart Stake's Next Election site](https://findora.smartstake.io/)
+    - Monitor stats non stop on [Smart Stake's Next Election site](https://fractal.smartstake.io/)
     - Monitor stats on your nodes
     - Monitor uptime (aka missed signings)
     - Investigate missed signings
@@ -68,10 +68,10 @@ Here's some helpful tips to keep in mind along the way!
 </Tabs>
 
 ## Admin tools
-See our [Admin Tools guide](/admin) for Findora Administrators for more info.
+See our [Admin Tools guide](/admin) for Fractal Administrators for more info.
 
 ## Server Selection
-Grab a server. We suggest using a budget host with enough storage. Currently used providers (depending on location) are ovh.com / ovh.us, server4u, contabo. [Hetzner](https://hetzner.cloud/?ref=uUlKM6mNXPli) is no longer recommended for a host as crypto is against their policy but does work great for learning and testing a Findora server.
+Grab a server. We suggest using a budget host with enough storage. Currently used providers (depending on location) are ovh.com / ovh.us, server4u, contabo. [Hetzner](https://hetzner.cloud/?ref=uUlKM6mNXPli) is no longer recommended for a host as crypto is against their policy but does work great for learning and testing a Fractal server.
 
 <Tabs
   items={["Mainnet Requirements", "Testnet Requirements"]}
@@ -95,7 +95,7 @@ Both of our installation methos will make a brand new wallet file (tmp.gen.keypa
 Almost all cloud providers have a web firewall built into their hosting website. It's much easier to use than software firewalls on your server.
 
 ### Web Firewall Config
-You'll need port 22 for SSH connections, and the following ports should be open for Findora.
+You'll need port 22 for SSH connections, and the following ports should be open for Fractal.
 ```text copy
 22
 8545
@@ -130,8 +130,8 @@ sudo ufw enable
 sudo ufw status
 ```
 
-## Findora Components
-Findora has two components: A docker container that runs the validator software and has your private validator info & `fn` an application that contains your staking wallet and performs blockchain commands.
+## Fractal Components
+Fractal has two components: A docker container that runs the validator software and has your private validator info & `fn` an application that contains your staking wallet and performs blockchain commands.
 
 ## Installation Type
 Which ever setup type you decide to try (Manual, Script or Toolbox) we recommend you practice on testnet first. It only takes moments to isntall and you can test out every function you'd like even before "officially staking and starting" your validator. It's all practice up until the moment you send FRA to the wallet you will use for your validator and stake them on chain.

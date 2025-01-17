@@ -2,12 +2,12 @@ import { Tab, Tabs } from "nextra-theme-docs";
 
 # Easy Node's Post Install Tips
 
-Here's a few things to know and check up on after you get a Findora server online.
+Here's a few things to know and check up on after you get a Fractal server online.
 
 ## Toolbox help
 You can find our baked in options and help menu by running:  
 ```text copy
-./findora.sh -h
+./fractal.sh -h
 ```
 
 ![Our help menu options as of 2/17/2023](/fra_help_options.png)
@@ -17,7 +17,7 @@ You can find our baked in options and help menu by running:
 - -c, --claim - Claim all of your pending rewards
 - --mainnet - Run the installer with the mainnet option by default
 - --testnet - Run the installer with the testnet option by default
-- --reset - This will wipe all of your findora data, settings, and toolbox settings to allow a reload of Findora
+- --reset - This will wipe all of your fractal data, settings, and toolbox settings to allow a reload of Fractal
 
 ## Finish setup
 
@@ -111,13 +111,13 @@ The most commonly used commands and how to find the rest that may be needed. All
     The command below will run and display your stats via validator toolbox:  
 
     ```text copy
-    python3 ~/findora-toolbox/src/app.py -s
+    python3 ~/fractal-toolbox/src/app.py -s
     ```
 
-    You can also run this remotely from your home terminal via ssh. Customize the command below with your Findora server username, IP and port. Run the command to pull stats remotely:  
+    You can also run this remotely from your home terminal via ssh. Customize the command below with your Fractal server username, IP and port. Run the command to pull stats remotely:  
 
     ```text copy
-    ssh [USERNAME]@[IP] -p [PORT] python3 /home/servicefindora/findora-toolbox/src/app.py -s
+    ssh [USERNAME]@[IP] -p [PORT] python3 /home/servicefindora/fractal-toolbox/src/app.py -s
     ```
 
   </Tab>
@@ -132,7 +132,7 @@ The most commonly used commands and how to find the rest that may be needed. All
 
 ## View Your Stats Online
 
-After you sucessfully register your wallet and stake your initial Findora your validator will show up on the [staking dashboard](https://findorascan.io/nodes) along with the [SmartStake site](https://findora.smartstake.io/).
+After you sucessfully register your wallet and stake your initial Fractal your validator will show up on the [staking dashboard](https://findorascan.io/nodes) along with the [SmartStake site](https://fractal.smartstake.io/).
 
 ## Backup Key Files
 
@@ -144,7 +144,7 @@ If you used the scripted or toolbox method all the files you need to backup will
 
     ```text
     - tmp.gen.keypair - This file is the same as your network_node.key file (network being mainnet or testnet)
-    - /data/findora/[network]/tendermint/config folder - This is a copy of your tendermint/config folder which contains priv_validator_key.json
+    - /data/fractal/[network]/tendermint/config folder - This is a copy of your tendermint/config folder which contains priv_validator_key.json
     ```
 
     Optionally you should backup your staker_memo file for re-using later.
@@ -166,7 +166,7 @@ If you used the scripted or toolbox method all the files you need to backup will
   </Tab>
 </Tabs>
 
-## Findora Validator Troubleshooting
+## Fractal Validator Troubleshooting
 
 ### Validator Toolbox
 
@@ -188,7 +188,7 @@ An example of findorad not running, continue to next step.
 
 ![No container named findorad found](/no_findorad.png)
 
-An example of findorad running, congrats! If your container is online and curl still doesn't respond, check your [Firewall](/findora/new#firewall) instead.
+An example of findorad running, congrats! If your container is online and curl still doesn't respond, check your [Firewall](/fractal/new#firewall) instead.
 
 ![The container named findorad running](/findora_running.png)
 
@@ -205,7 +205,7 @@ docker logs findorad
 Analyze the error - We suggest running the "update/restart" script from our repository first to try to fix the issue. Run the following code to run our update script (or use the option in the Validator Toolbox):
 
 ```text copy
-./findora.sh -u
+./fractal.sh -u
 ```
 
 If everything goes well the container will restart, be back online and show stats at this point. If you still have an error, continue onto Safety Clean.  
@@ -219,7 +219,7 @@ If it fails and you still have the following error in your findorad logs at this
 You can pull the latest copy and run it with the following code, this will wipe and reload the database:
 
 ```text copy
-./findora.sh --clean
+./fractal.sh --clean
 ```
 
 At the end of our script, your stats will print out. You should be back online at this point and syncing should resume. 
@@ -231,7 +231,7 @@ Check your stats until `catching_up` is false with the following code:
 <Tabs items={["Toolbox Stats", "Classic Stats"]} defaultIndex="0">
   <Tab>
     ```text copy
-    ./findora.sh -s
+    ./fractal.sh -s
     ```
   </Tab>
   <Tab>
@@ -246,7 +246,7 @@ Check your stats until `catching_up` is false with the following code:
 Run `fn` and make sure it's error free. If you have any errors there's 3 commands to setup/reset `fn`, run the following for mainnet (replace mainnet with testnet if testing):
 
 ```text copy
-./findora.sh --fn
+./fractal.sh --fn
 ```
 
 Once you've reconnected the files with the above command `fn` show should now properly display your wallet (and if created on chain, validator) information.
@@ -260,16 +260,16 @@ Note: These are both included in the validator toolbox, but for those of you who
 The update_mainnet.sh script will stop your container, pull in any updates, and restart the container if your files are in the proper spot and your permissions are set properly. Operators also use this to restart their containers or start them up if they are down.
 
 ```text copy
-./findora.sh -u
+./fractal.sh -u
 ```
 
-## vStats Bot Findora
+## vStats Bot Fractal
 
 Fortune Validator has created the telegram bot vStatsFindora to help you monitor your server. Sign up with the Telegram bot [right here](https://t.me/vStatsFindoraBot).
 
 ## Resources
 
-- [Findora Main Dashboard](https://findorascan.io) - Findora's Official Dashboard & Explorer
-- [Findora SmartStake](https://findora.smartstake.io) - Stats
-- [Findora Telegram](https://t.me/findoraen) - A telegram chat full of Findora Validators to ask quesitons. Ask for an invite in the main.
-- [Findora's Official Discord Server](https://discord.com/servers/easynode-pro-blockchain-validators-404423550909284372) - The central spot for all Findora news and updates.
+- [Fractal Main Dashboard](https://findorascan.io) - Fractal's Official Dashboard & Explorer
+- [Fractal SmartStake](https://fractal.smartstake.io) - Stats
+- [Fractal Telegram](https://t.me/findoraen) - A telegram chat full of Fractal Validators to ask quesitons. Ask for an invite in the main.
+- [Fractal's Official Discord Server](https://discord.com/servers/easynode-pro-blockchain-validators-404423550909284372) - The central spot for all Fractal news and updates.

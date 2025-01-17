@@ -3,7 +3,7 @@ import { Tab, Tabs } from "nextra-theme-docs";
 # Power Users
 
 ## cloud-init
-If you know if your server provider has cloud init, you're a power user. A few hosts that have cloud-init include OVH, Hetzner, Digital Ocean, Vultr and many many more. Here's our custom cloud-init that will prep any VPS for either the Harmony or Findora! Thanks for the security hardening tips [from here](https://gist.github.com/MrGraversen/734364483641afae903c8e86ce464868).  
+If you know if your server provider has cloud init, you're a power user. A few hosts that have cloud-init include OVH, Hetzner, Digital Ocean, Vultr and many many more. Here's our custom cloud-init that will prep any VPS for either the Harmony or Fractal! Thanks for the security hardening tips [from here](https://gist.github.com/MrGraversen/734364483641afae903c8e86ce464868).  
 
 To use the code below simply replace the ssh-rsa key with your id_rsa.pub key and set the username you would like to use on the server (Change `servicefindora` or `serviceuser` in the examples below).
 
@@ -12,7 +12,7 @@ Security Notes:
 - We included a config that sets up UFW for you if you use it! Cloud providers may have their own firewall, your choice!
 - Inject your `- ssh-rsa ...Your Key Here...` into the cloud-init users section below as 1 line with the full key.
 
-<Tabs items={["Findora cloud-init", "Findora w/ UFW Settings cloud-init", "Harmony cloud-init", "Harmony w/ UFW Settings cloud-init"]} defaultIndex="0">
+<Tabs items={["Fractal cloud-init", "Fractal w/ UFW Settings cloud-init", "Harmony cloud-init", "Harmony w/ UFW Settings cloud-init"]} defaultIndex="0">
   <Tab>
     ```text copy
     #cloud-config
@@ -119,22 +119,22 @@ Security Notes:
 </Tabs>
 **Note**: The cloud-init does take a few minutes to run after your server comes online. Wait a few minutes for this to complete or verifiy it finishes up by watching the logs with `sudo tail -f /var/log/syslog` to see it complete.  
 
-## Findora
-If you're going to be installing Findora you will need to exit your session and start a new one to join the Docker group. Run the command `groups` to verify your account has docker listed as a group.
+## Fractal
+If you're going to be installing Fractal you will need to exit your session and start a new one to join the Docker group. Run the command `groups` to verify your account has docker listed as a group.
 
 Pull the runner to your servery by running the following command to also start the installer:
 ```text copy
-cd ~/ && wget https://raw.githubusercontent.com/FindoraNetwork/findora-toolbox/main/src/bin/findora.sh && chmod +x findora.sh && ./findora.sh --installer
+cd ~/ && wget https://raw.githubusercontent.com/FindoraNetwork/fractal-toolbox/main/src/bin/fractal.sh && chmod +x fractal.sh && ./fractal.sh --installer
 ```
 
 The installer will start up and ask if you'd like mainnet or testnet and begin installation. To re-launch the menu with the latest updates after installation completes, run:
 ```text copy
-./findora.sh
+./fractal.sh
 ```
 
 Show all options with:
 ```text copy
-./findora.sh --help
+./fractal.sh --help
 ```
 
 ![Toolbox help menu](/toolbox-help.jpg)
