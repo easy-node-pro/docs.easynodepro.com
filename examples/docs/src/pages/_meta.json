@@ -22,6 +22,11 @@
     "title": "Developers"
   },
   "api-docs": "API Guides",
+  "-- $ENP --": {
+    "type": "separator",
+    "title": "enp"
+  },
+  "enp": "$ENP Token Info",
   "-- Space --": {
     "type": "separator",
     "title": ""

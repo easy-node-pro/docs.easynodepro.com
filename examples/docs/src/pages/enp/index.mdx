@@ -1,0 +1,31 @@
+import { Callout } from 'nextra-theme-docs'
+import Image from 'next/image'
+import { useSSG } from 'nextra/ssg'
+
+export const getStaticProps = ({ params }) => {
+  return fetch(`https://api.github.com/repos/easy-node-pro/docs.easynode.pro`)
+    .then((res) => res.json())
+    .then((repo) => ({
+      props: {
+        // We add an `ssg` field to the page props,
+        // which will be provided to the Nextra `useSSG` hook.
+        ssg: {
+          stars: repo.stargazers_count,
+        },
+      },
+      // The page will be considered as stale and regenerated every 60 seconds.
+      revalidate: 60,
+    }))
+}
+
+export const Stars = () => {
+  // Get the data from SSG, and render it as a component.
+  const { stars } = useSSG()
+  return <strong>{stars}</strong>
+}
+
+# ENP Token Information
+
+## What is ENP Token?
+ENP Token is a Harmony $ONE Protocol ERC-20 token created by EasyNode.pro designed to boost the rewards of delegators.
+
