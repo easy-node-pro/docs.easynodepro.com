@@ -1,121 +1,95 @@
-import { Callout } from 'nextra-theme-docs'
-import Image from 'next/image'
-import { useSSG } from 'nextra/ssg'
-
-export const getStaticProps = ({ params }) => {
-  return fetch(`https://api.github.com/repos/easy-node-pro/docs.easynode.pro`)
-    .then((res) => res.json())
-    .then((repo) => ({
-      props: {
-        // We add an `ssg` field to the page props,
-        // which will be provided to the Nextra `useSSG` hook.
-        ssg: {
-          stars: repo.stargazers_count,
-        },
-      },
-      // The page will be considered as stale and regenerated every 60 seconds.
-      revalidate: 60,
-    }))
-}
-
-export const Stars = () => {
-  // Get the data from SSG, and render it as a component.
-  const { stars } = useSSG()
-  return <strong>{stars}</strong>
-}
-
-# EPN Token White Paper
+# ENP Token White Paper
 
 ## Introduction
 
-The EPN token is a utility token designed to incentivize and reward users for staking with our validator pool on the Harmony blockchain. By providing a unique token-based reward system, we aim to create a more engaging and profitable experience for our users while also promoting the growth and adoption of the Harmony ecosystem.
+The ENP token is a utility token designed to incentivize and reward users for staking with our validator pool on the Harmony blockchain. By providing a unique token-based reward system, we aim to create a more engaging and profitable experience for our users while also promoting the growth and adoption of the Harmony ecosystem.
 
 ## Token Overview
 
-- **Token Name:** EPN (Ecosystem Participation Node)
-- **Token Symbol:** EPN
-- **Total Supply:** 500,000,000 EPN
+- **Token Name:** ENP (EasyNode.pro)
+- **Token Symbol:** ENP
+- **Total Supply:** 500,000,000 ENP
 - **Token Type:** ERC-20
 - **Blockchain:** Harmony
 
 ## Token Distribution
 
-The EPN token will be distributed as follows:
+The ENP token will be distributed as follows:
 
-- **Airdrop:** 20% of the total supply (100,000,000 EPN) will be airdropped to users who stake with our validator pool, proportional to their stake weight.
-- **Liquidity Pool:** 10% of the total supply (50,000,000 EPN) will be allocated to a liquidity pool on a decentralized exchange (DEX), paired with Harmony's ONE token.
-- **Team Allocation:** 5% of the total supply (25,000,000 EPN) will be allocated to the team.
-- **Remaining Tokens:** 65% of the total supply (325,000,000 EPN) will be reserved for future development, partnerships, and other purposes.
+- **Airdrop:** 20% of the total supply (100,000,000 ENP) will be airdropped to users who stake with our validator pool, proportional to their stake weight.
+- **Liquidity Pool:** 10% of the total supply (50,000,000 ENP) will be allocated to a liquidity pool on a decentralized exchange (DEX), paired with Harmony's ONE token.
+- **Team Allocation:** 5% of the total supply (25,000,000 ENP) will be allocated to the team.
+- **Remaining Tokens:** 65% of the total supply (325,000,000 ENP) will be reserved for future development, partnerships, and other purposes.
 
 ## Token Utility
 
-The EPN token will have the following utilities:
+The ENP token will have the following utilities:
 
-- **Staking Rewards:** EPN tokens will be distributed as rewards to users who stake with our validator pool, in addition to the standard ONE rewards.
-- **Liquidity Provision:** EPN tokens will be used to provide liquidity on a DEX, paired with ONE, to create a stable and liquid market.
-- **Token Burning:** A portion of the EPN tokens will be burned periodically, using the ONE rewards earned by our validator pool, to reduce the total supply and increase the token's value.
-- **Governance:** EPN token holders will have voting rights on proposals for the development and growth of our validator pool and the Harmony ecosystem.
+- **Staking Rewards:** ENP tokens will be distributed as rewards to users who stake with our validator pool, in addition to the standard ONE rewards.
+- **Liquidity Provision:** ENP tokens will be used to provide liquidity on a DEX, paired with ONE, to create a stable and liquid market.
+- **Token Burning:** A portion of the ENP tokens will be burned periodically, using the ONE rewards earned by our validator pool, to reduce the total supply and increase the token's value.
+- **Governance:** ENP token holders will have voting rights on proposals for the development and growth of our validator pool and the Harmony ecosystem.
 
 ## Tokenomics
 
-The EPN token's value will be driven by the following factors:
+The ENP token's value will be driven by the following factors:
 
-- **Staking Demand:** The demand for EPN tokens will increase as more users stake with our validator pool, driving up the token's value.
+- **Staking Demand:** The demand for ENP tokens will increase as more users stake with our validator pool, driving up the token's value.
 - **Liquidity:** The liquidity pool will provide a stable source of buy and sell pressure, maintaining a stable market price.
-- **Token Burning:** The periodic burning of EPN tokens will reduce the total supply, increasing the token's value over time.
-- **Adoption:** As the Harmony ecosystem grows, the demand for EPN tokens will increase, driving up the token's value.
+- **Token Burning:** The periodic burning of ENP tokens will reduce the total supply, increasing the token's value over time.
+- **Adoption:** As the Harmony ecosystem grows, the demand for ENP tokens will increase, driving up the token's value.
 
 ## Validator Pool Integration
 
-Our validator pool will be integrated with the EPN token as follows:
+Our validator pool will be integrated with the ENP token as follows:
 
-- **Staking Rewards:** Users who stake with our validator pool will receive EPN tokens as rewards, in addition to the standard ONE rewards.
-- **Weighted Distribution:** EPN tokens will be distributed to users based on their stake weight, ensuring that larger stakeholders receive a proportionally larger share of the rewards.
-- **Reward Schedule:** EPN tokens will be distributed on a regular schedule, ensuring that users receive their rewards in a timely and predictable manner.
+- **Staking Rewards:** Users who stake with our validator pool will receive ENP tokens as rewards, in addition to the standard ONE rewards.
+- **Weighted Distribution:** ENP tokens will be distributed to users based on their stake weight, ensuring that larger stakeholders receive a proportionally larger share of the rewards.
+- **Reward Schedule:** ENP tokens will be distributed on a regular schedule, ensuring that users receive their rewards in a timely and predictable manner.
 
 ## Liquidity Pool Strategy
 
 Our liquidity pool strategy will involve the following:
 
 - **Initial Liquidity:** We started 3 LP funds with the following allocations:
-  - 50 million EPN / 30,000 ONE
-  - 4.2 million EPN / 2,500 uONE
-  - 21.2 million EPN / 1 billion MONA
-  - Approximately 75 million EPN has been allocated to LP pools to start.
-- **ONE Rewards:** We will use the ONE rewards earned by our validator pool to buy EPN tokens on the market and add them to the LP, increasing the pool's liquidity and depth.
+  - 50 million ENP / 30,000 ONE
+  - 4.2 million ENP / 2,500 uONE
+  - 21.2 million ENP / 1 billion MONA
+  - Approximately 75 million ENP has been allocated to LP pools to start.
+- **ONE Rewards:** We will use the ONE rewards earned by our validator pool to buy ENP tokens on the market and add them to the LP, increasing the pool's liquidity and depth.
 - **LP Token Burning:** We will periodically burn a portion of the LP tokens to reduce the total supply and increase the token's value.
 
 ## Airdrop Strategy
 
 ### Initial Airdrop:
 
-- 10 million EPN was airdropped to EasyNode.pro Validator delegators.
-- 20 million EPN was airdropped to RockTheBlockchain Validator delegators.
-- 2 million EPN was airdropped to each of the following validator delegators: Farmony, Harmony Hub, and Deadpool.
+- 10 million ENP was airdropped to EasyNode.pro Validator delegators.
+- 20 million ENP was airdropped to RockTheBlockchain Validator delegators.
+- 2 million ENP was airdropped to each of the following validator delegators: Farmony, Harmony Hub, and Deadpool.
 
 ### Future Airdrops:
 
 - Future airdrops will only go to EasyNode.pro and RockTheBlockchain delegators. Users are encouraged to migrate to these validators to receive future airdrops.
-- A total of 36 million EPN has been airdropped so far, with 114 million EPN reserved for future airdrops over the next 2+ years.
+- A total of 36 million ENP has been airdropped so far, with 114 million ENP reserved for future airdrops over the next 2+ years.
 
 ## Token Reserve and Burn Mechanism
 
-- **Project/Marketing Reserve:** 250 million EPN will be reserved for projects and marketing.
-- **Price Action Fund:** 25 million EPN was released to EasyNode.pro staff to spur EPN price action by buying and either reserving EPN for future airdrops or burning EPN.
-- **Token Burn:** To date, we have already burned 1 million EPN, reducing the overall supply to 499 million. We will continue to burn tokens along with airdrops of EPN.
-- **Validator Rewards Utilization:** We utilize Harmony ONE rewards from our validator to return an extra percentage of our fee to our delegators by buying EPN from the pool, then either burning the EPN or re-airdropping it in future distributions.
+- **Project/Marketing Reserve:** 250 million ENP will be reserved for projects and marketing.
+- **Price Action Fund:** 25 million ENP was released to EasyNode.pro staff to spur ENP price action by buying and either reserving ENP for future airdrops or burning ENP.
+- **Token Burn:** To date, we have already burned 1 million ENP, reducing the overall supply to 499 million. We will continue to burn tokens along with airdrops of ENP.
+- **Validator Rewards Utilization:** We utilize Harmony ONE rewards from our validator to return an extra percentage of our fee to our delegators by buying ENP from the pool, then either burning the ENP or re-airdropping it in future distributions.
 
 ## Smart Contract Information
 
-- The EPN smart contract is from thirdweb and has been renounced, meaning no one can create any more or control the contract.
+- The ENP smart contract is from thirdweb and has been renounced, meaning no one can create any more or control the contract.
 
 ## Security and Audits
 
-The EPN token smart contract will be audited by a reputable third-party auditor to ensure its security and integrity. We will also implement industry-standard security measures to protect our validator pool and user funds.
+The ENP token smart contract will be audited by a reputable third-party auditor to ensure its security and integrity. We will also implement industry-standard security measures to protect our validator pool and user funds.
 
 ## Conclusion
 
-The EPN token is designed to provide a unique and rewarding experience for users who stake with our validator pool on the Harmony blockchain. By offering a token-based reward system, we aim to create a more engaging and profitable experience for our users while also promoting the growth and adoption of the Harmony ecosystem. We believe that the EPN token has the potential to become a leading utility token in the Harmony ecosystem and look forward to working with our users and partners to achieve this vision.
+The ENP token is designed to provide a unique and rewarding experience for users who stake with our validator pool on the Harmony blockchain. By offering a token-based reward system, we aim to create a more engaging and profitable experience for our users while also promoting the growth and adoption of the Harmony ecosystem. We believe that the ENP token has the potential to become a leading utility token in the Harmony ecosystem and look forward to working with our users and partners to achieve this vision.
 
 ## Roadmap
 
@@ -124,5 +98,5 @@ The EPN token is designed to provide a unique and rewarding experience for users
 
 ## Links
 
-- **EPN Contract:** [0xc4Aa9D9D003E68b6c3D223670d4dA74BB65c4666](https://explorer.harmony.one/address/0xc4Aa9D9D003E68b6c3D223670d4dA74BB65c4666)
+- **ENP Contract:** [0xc4Aa9D9D003E68b6c3D223670d4dA74BB65c4666](https://explorer.harmony.one/address/0xc4Aa9D9D003E68b6c3D223670d4dA74BB65c4666)
 - **Multisig:** [0x3c0e1A58556d1490Bb0923D8c47A766B7A491b10](https://multisig.harmony.one/home?safe=hmy:0x3c0e1A58556d1490Bb0923D8c47A766B7A491b10)
