@@ -24,9 +24,9 @@
   "api-docs": "API Guides",
   "-- $ENP --": {
     "type": "separator",
-    "title": "enp"
+    "title": "ENP Token"
   },
-  "enp": "$ENP Token Info",
+  "enp": "Info",
   "-- Space --": {
     "type": "separator",
     "title": ""
