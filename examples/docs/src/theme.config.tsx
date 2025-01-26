@@ -7,7 +7,7 @@ import { useRouter } from "next/router";
  */
 export default {
   chat: {
-    link: "https://discord.com/servers/easynode-pro-blockchain-validators-404423550909284372", // Next.js discord server,
+    link: "https://mee6.xyz/i/TvaDiyZ9hc", // Next.js discord server,
   },
   darkMode: true,
   docsRepositoryBase: "https://github.com/easy-node-pro/docs.easynode.pro",
