@@ -21,8 +21,8 @@ export default {
         <div className="flex w-full flex-col items-center sm:items-start">
           <div>
             ⚡{" "}
-            <a href="https://EasyNode.PRO" target="_blank" rel="noreferrer">
-              EasyNode.PRO
+            <a href="https://easynodepro.com" target="_blank" rel="noreferrer">
+              EasyNodePro.com
             </a>{" "}
             ⚡ Blockchain Docs - ©{new Date().getFullYear()}
           </div>
@@ -32,7 +32,7 @@ export default {
   },
   logo: (
     <span className="mr-2 hidden font-extrabold md:inline">
-      EasyNode.PRO ⚡ Blockchain Docs
+      EasyNodePro.com ⚡ Blockchain Docs
     </span>
   ),
   navigation: {
@@ -90,7 +90,7 @@ export default {
         { content: "en", httpEquiv: "Content-Language" },
         { content: "#fff", name: "msapplication-TileColor" },
         { content: "/192x192_App_Icon.png", name: "msapplication-TileImage" },
-        { content: "EasyNode.PRO ⚡ Blockchain Documents and Guides", name: "description" },
+        { content: "EasyNodePro.com ⚡ Blockchain Documents and Guides", name: "description" },
         {
           content: "Our documents site. We help everyone crypto like a pro!",
           name: "og:description",
@@ -102,13 +102,13 @@ export default {
         },
         { content: "docs.easynodepro.com", name: "twitter:site:domain" },
         { content: "https://docs.easynodepro.com", name: "twitter:url" },
-        { content: "EasyNode.PRO ⚡ Blockchain Documents and Guides", name: "og:title" },
+        { content: "EasyNodePro.com ⚡ Blockchain Documents and Guides", name: "og:title" },
         {
           content: "https://docs.easynodepro.com/twitter_card_800x418.jpg",
           name: "og:image",
         },
         {
-          content: "EasyNode.PRO ⚡ Blockchain Docs",
+          content: "EasyNodePro.com ⚡ Blockchain Docs",
           name: "apple-mobile-web-app-title",
         },
       ],
