@@ -44,7 +44,7 @@
     "items": {
       "easynode": {
         "title": "Website",
-        "href": "https://easynode.pro",
+        "href": "https://easynodepro.com",
         "newWindow": true
       },
       "discord": {
@@ -69,7 +69,7 @@
       },
       "staking": {
         "title": "Validators",
-        "href": "https://easynode.pro/ourvalidators",
+        "href": "https://easynodepro.com/ourvalidators",
         "newWindow": true
       }
     }
@@ -85,7 +85,7 @@
   "contact": {
     "title": "Links ↗",
     "type": "page",
-    "href": "https://easynode.pro/links",
+    "href": "https://easynodepro.com/links",
     "newWindow": true
   }
 }

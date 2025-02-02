@@ -250,11 +250,11 @@ export const DEFAULT_THEME: DocsThemeConfig = {
     <>
       <meta name="msapplication-TileColor" content="#fff" />
       <meta httpEquiv="Content-Language" content="en" />
-      <meta name="description" content="Easy Node - docs.easynode.pro" />
+      <meta name="description" content="Easy Node - docs.easynodepro.com" />
       <meta name="twitter:card" content="/twitter_card_800x418.jpg" />
       <meta name="twitter:site" content="@easynode_" />
-      <meta property="og:title" content="Easy Node - docs.easynode.pro" />
-      <meta property="og:description" content="Easy Node - docs.easynode.pro" />
+      <meta property="og:title" content="Easy Node - docs.easynodepro.com" />
+      <meta property="og:description" content="Easy Node - docs.easynodepro.com" />
       <meta name="apple-mobile-web-app-title" content="Nextra" />
     </>
   ),
@@ -263,7 +263,7 @@ export const DEFAULT_THEME: DocsThemeConfig = {
     <>
       <span className="nx-font-extrabold">Easy Node</span>
       <span className="nx-ml-2 nx-hidden nx-font-normal nx-text-gray-600 md:nx-inline">
-        docs.easynode.pro
+        docs.easynodepro.com
       </span>
     </>
   ),

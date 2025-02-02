@@ -10,7 +10,7 @@ export default {
     link: "https://mee6.xyz/i/TvaDiyZ9hc", // Next.js discord server,
   },
   darkMode: true,
-  docsRepositoryBase: "https://github.com/easy-node-pro/docs.easynode.pro",
+  docsRepositoryBase: "https://github.com/easy-node-pro/docs.easynodepro.com",
   editLink: {
     text: "Edit this page on GitHub →",
   },
@@ -51,7 +51,7 @@ export default {
     const { route } = useRouter();
     if (route !== "/") {
       return {
-        titleTemplate: "%s  ⚡ Docs.EasyNode.pro ⚡",
+        titleTemplate: "%s  ⚡ docs.easynodepro.com ⚡",
       };
     }
     return {
@@ -97,14 +97,14 @@ export default {
         },
         { content: "summary_large_image", name: "twitter:card" },
         {
-          content: "https://docs.easynode.pro/twitter_card_800x418.jpg",
+          content: "https://docs.easynodepro.com/twitter_card_800x418.jpg",
           name: "twitter:image",
         },
-        { content: "docs.easynode.pro", name: "twitter:site:domain" },
-        { content: "https://docs.easynode.pro", name: "twitter:url" },
+        { content: "docs.easynodepro.com", name: "twitter:site:domain" },
+        { content: "https://docs.easynodepro.com", name: "twitter:url" },
         { content: "EasyNode.PRO ⚡ Blockchain Documents and Guides", name: "og:title" },
         {
-          content: "https://docs.easynode.pro/twitter_card_800x418.jpg",
+          content: "https://docs.easynodepro.com/twitter_card_800x418.jpg",
           name: "og:image",
         },
         {
@@ -112,20 +112,20 @@ export default {
           name: "apple-mobile-web-app-title",
         },
       ],
-      description: frontMatter.description || "⚡ docs.easynode.pro ⚡",
+      description: frontMatter.description || "⚡ docs.easynodepro.com ⚡",
       openGraph: {
         images: [
           {
             url:
               frontMatter.image ||
-              "https://docs.easynode.pro/twitter_card_800x418.jpg",
+              "https://docs.easynodepro.com/twitter_card_800x418.jpg",
           },
         ],
       },
-      titleTemplate: "%s  ⚡ Docs.EasyNode.pro ⚡",
+      titleTemplate: "%s  ⚡ docs.easynodepro.com ⚡",
       twitter: {
         cardType: "summary_large_image",
-        site: "https://docs.easynode.pro",
+        site: "https://docs.easynodepro.com",
       },
     };
   },
