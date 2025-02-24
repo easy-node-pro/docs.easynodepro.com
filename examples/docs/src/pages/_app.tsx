@@ -22,6 +22,7 @@ export default function Nextra({
         data-x_margin="18"
         data-y_margin="18"
       />
+      <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "1671c45fd0a645cb9d83def734792c8c"}'></script><!-- End Cloudflare Web Analytics -->
       <GoogleAnalytics trackPageViews />
       <Component {...pageProps} />
     </>
