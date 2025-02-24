@@ -4,27 +4,27 @@ import type { ReactElement } from "react";
 import type { AppProps } from "next/app";
 
 export default function Nextra({
-  Component,
-  pageProps,
+    Component,
+    pageProps,
 }: AppProps): ReactElement {
-  return (
-    <>
-      <script
-        async
-        data-name="BMC-Widget"
-        data-cfasync="false"
-        src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js"
-        data-id="easynode"
-        data-description="Support me on Buy me a coffee!"
-        data-message="Thanks for stopping by! If we help you stake or validate consider helping us make more content by buying us a coffee!"
-        data-color="#2CEA26"
-        data-position="Right"
-        data-x_margin="18"
-        data-y_margin="18"
-      />
-      <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "1671c45fd0a645cb9d83def734792c8c"}'></script><!-- End Cloudflare Web Analytics -->
-      <GoogleAnalytics trackPageViews />
-      <Component {...pageProps} />
-    </>
-  );
+    return (
+        <>
+            <script
+                async
+                data-name="BMC-Widget"
+                data-cfasync="false"
+                src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js"
+                data-id="easynode"
+                data-description="Support me on Buy me a coffee!"
+                data-message="Thanks for stopping by! If we help you stake or validate consider helping us make more content by buying us a coffee!"
+                data-color="#2CEA26"
+                data-position="Right"
+                data-x_margin="18"
+                data-y_margin="18"
+            />
+            <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "1671c45fd0a645cb9d83def734792c8c"}'></script>
+            <GoogleAnalytics trackPageViews />
+            <Component {...pageProps} />
+        </>
+    );
 }
