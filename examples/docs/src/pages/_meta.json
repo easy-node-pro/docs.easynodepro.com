@@ -16,7 +16,6 @@
   },
   "serv": "SERV Guides",
   "harmony": "Harmony Guides",
-  "fractal": "Fractal Guides",
   "-- Developers --": {
     "type": "separator",
     "title": "Developers"
