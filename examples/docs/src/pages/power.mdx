@@ -3,69 +3,16 @@ import { Tab, Tabs } from "nextra-theme-docs";
 # Power Users
 
 ## cloud-init
-If you know if your server provider has cloud init, you're a power user. A few hosts that have cloud-init include OVH, Hetzner, Digital Ocean, Vultr and many many more. Here's our custom cloud-init that will prep any VPS for either the Harmony or Fractal! Thanks for the security hardening tips [from here](https://gist.github.com/MrGraversen/734364483641afae903c8e86ce464868).  
+If you know if your server provider has cloud init, you're a power user. A few hosts that have cloud-init include OVH, Hetzner, Digital Ocean, Vultr and many many more. Here's our custom cloud-init that will prep any VPS for Harmony! Thanks for the security hardening tips [from here](https://gist.github.com/MrGraversen/734364483641afae903c8e86ce464868).  
 
-To use the code below simply replace the ssh-rsa key with your id_rsa.pub key and set the username you would like to use on the server (Change `servicefindora` or `serviceuser` in the examples below).
+To use the code below simply replace the ssh-rsa key with your id_rsa.pub key and set the username you would like to use on the server (Change `serviceharmony` or `serviceuser` in the examples below).
 
 Security Notes:
 - You can customize any of this!
 - We included a config that sets up UFW for you if you use it! Cloud providers may have their own firewall, your choice!
 - Inject your `- ssh-rsa ...Your Key Here...` into the cloud-init users section below as 1 line with the full key.
 
-<Tabs items={["Fractal cloud-init", "Fractal w/ UFW Settings cloud-init", "Harmony cloud-init", "Harmony w/ UFW Settings cloud-init"]} defaultIndex="0">
-  <Tab>
-    ```text copy
-    #cloud-config
-  users:
-    - name: servicefindora
-      groups: sudo
-      shell: /bin/bash
-      sudo: ['ALL=(ALL) NOPASSWD:ALL']
-      ssh-authorized-keys:
-        - ssh-rsa ...Your Key Here...
-  package_upgrade: true
-  runcmd:
-    - apt-get update
-    - apt-get upgrade -y
-    - curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
-    - add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable"
-    - apt install apt-transport-https ca-certificates curl software-properties-common docker-ce docker-ce-cli dnsutils docker-compose containerd.io bind9-dnsutils git python3-pip python3-dotenv unzip -y
-    - systemctl start docker
-    - systemctl enable docker
-    - usermod -aG docker servicefindora
-    ```
-  </Tab>
-    <Tab>
-    ```text copy
-    #cloud-config
-    users:
-      - name: servicefindora
-        groups: sudo
-        shell: /bin/bash
-        sudo: ['ALL=(ALL) NOPASSWD:ALL']
-        ssh-authorized-keys:
-          - ssh-rsa ...Your Key Here...
-    package_upgrade: true
-    runcmd:
-      - apt-get update
-      - apt-get upgrade -y
-      - curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
-      - add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable"
-      - apt install apt-transport-https ca-certificates curl software-properties-common docker-ce docker-ce-cli dnsutils docker-compose containerd.io bind9-dnsutils git python3-pip python3-dotenv unzip -y
-      - systemctl start docker
-      - systemctl enable docker
-      - usermod -aG docker servicefindora
-      - ufw default deny incoming
-      - ufw default allow outgoing
-      - ufw allow 22/tcp
-      - ufw allow 8545/tcp
-      - ufw allow 8667/tcp
-      - ufw allow 8668/tcp
-      - ufw allow 8669/tcp
-      - ufw allow 26657/tcp
-      - ufw enable
-    ```
-  </Tab>
+<Tabs items={["Harmony cloud-init", "Harmony w/ UFW Settings cloud-init"]} defaultIndex="0">
   <Tab>
     ```text copy
     #cloud-config
@@ -118,26 +65,6 @@ Security Notes:
   </Tab>
 </Tabs>
 **Note**: The cloud-init does take a few minutes to run after your server comes online. Wait a few minutes for this to complete or verifiy it finishes up by watching the logs with `sudo tail -f /var/log/syslog` to see it complete.  
-
-## Fractal
-If you're going to be installing Fractal you will need to exit your session and start a new one to join the Docker group. Run the command `groups` to verify your account has docker listed as a group.
-
-Pull the runner to your servery by running the following command to also start the installer:
-```text copy
-cd ~/ && wget https://raw.githubusercontent.com/FindoraNetwork/fractal-toolbox/main/src/bin/fractal.sh && chmod +x fractal.sh && ./fractal.sh --installer
-```
-
-The installer will start up and ask if you'd like mainnet or testnet and begin installation. To re-launch the menu with the latest updates after installation completes, run:
-```text copy
-./fractal.sh
-```
-
-Show all options with:
-```text copy
-./fractal.sh --help
-```
-
-![Toolbox help menu](/toolbox-help.jpg)
 
 ## Harmony
 To pull and install the Harmony Validator Toolbox, run the following command:
